@@ -1,3 +1,5 @@
+# Auth0 integration steps
+
 # Auth0 action to add default role
 ### Environment Variables
 These can be found in the Auth0 Management API applications settings.
