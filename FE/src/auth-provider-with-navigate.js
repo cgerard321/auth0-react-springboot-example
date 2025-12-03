@@ -29,7 +29,7 @@ export const AuthProviderWithNavigate = ({ children }) => {
         redirect_uri: redirectUri,
         post_logout_redirect_uri: redirectUri,
         response_type: "code",
-        scope: "openid profile email demo_scope",
+        scope: "openid profile email",
         ...(audience ? { extraQueryParams: { audience } } : {}),
         onSigninCallback,
         automaticSilentRenew: false,
