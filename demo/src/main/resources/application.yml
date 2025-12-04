@@ -19,6 +19,6 @@ server:
 
 okta:
   oauth2:
-    issuer: https://*/
-    audience: https://*.*.*
+    issuer: https://dev-0g71n2bj3qgnv1ci.us.auth0.com/
+    audience: https://api.demo.com
 ...
