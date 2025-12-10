@@ -21,6 +21,11 @@ public class MessageController {
         return messageService.getPublicMessage();
     }
 
+    @GetMapping("/test")
+    public Message getTest() {
+        return messageService.getTestMessage();
+    }
+
     @GetMapping("/protected")
     public Message getProtected() {
         return messageService.getProtectedMessage();
@@ -29,7 +34,7 @@ public class MessageController {
     @GetMapping("/protected/customer")
     public Message getProtectedCustomer() {
         // Authentication removed - returning dummy message
-        return messageService.getCustomerMessage(null);
+        return messageService.getCustomerMessage();
     }
 
     @GetMapping("/admin")

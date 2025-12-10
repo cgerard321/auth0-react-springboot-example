@@ -36,13 +36,19 @@ public class MessageService {
         return Message.from(text);
     }
 
+    public Message getTestMessage() {
+        final var text = "This is a test endpoint - working without authentication!";
+
+        return Message.from(text);
+    }
+
     public Message getProtectedMessage() {
         final var text = "This is a protected message.";
 
         return Message.from(text);
     }
 
-    public Message getCustomerMessage(Object user) {
+    public Message getCustomerMessage() {
         final String text = "This is a customer message (no authentication).";
 
         return Message.from(text);
