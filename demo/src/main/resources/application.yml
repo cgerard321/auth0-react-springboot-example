@@ -17,8 +17,9 @@ server:
     resources:
       add-mappings: false
 
-okta:
-  oauth2:
-    issuer: https://<auth0-domain>/
-    audience: api-identifier
+# OAuth2 configuration commented out - not required for dummy endpoints
+#okta:
+#  oauth2:
+#    issuer: https://<auth0-domain>/
+#    audience: api-identifier
 ...

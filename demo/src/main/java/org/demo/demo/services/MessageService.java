@@ -11,8 +11,6 @@ import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.oauth2.core.oidc.user.OidcUser;
-import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 
 
@@ -44,8 +42,8 @@ public class MessageService {
         return Message.from(text);
     }
 
-    public Message getCustomerMessage(Jwt user) {
-        final String text = "This is a customer message for " + user.getSubject() + ".";
+    public Message getCustomerMessage(Object user) {
+        final String text = "This is a customer message (no authentication).";
 
         return Message.from(text);
     }
