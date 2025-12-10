@@ -30,7 +30,7 @@ dependencies {
     implementation('me.paulschwarz:spring-dotenv:4.0.0')
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('com.okta.spring:okta-spring-boot-starter:3.0.5')
-
+    implementation('org.springframework.security.oauth2.jwt.JwtDecoder')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation('org.springframework.security:spring-security-test')
 }
