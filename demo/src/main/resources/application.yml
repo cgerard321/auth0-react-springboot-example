@@ -18,8 +18,8 @@ server:
       add-mappings: false
 
 # OAuth2 configuration commented out - not required for dummy endpoints
-#okta:
-#  oauth2:
-#    issuer: https://<auth0-domain>/
-#    audience: api-identifier
+okta:
+  oauth2:
+    issuer: https://dev-goqh5m0ncp572g5s.us.auth0.com/
+    audience: https://api.authdemo.com
 ...
