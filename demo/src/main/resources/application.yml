@@ -6,7 +6,7 @@ spring:
 
 application:
   #client-origin-url: http://localhost:3000
-  client-origin-url: https://authdemofe-92dc7.ondigitalocean.app:3000
+  client-origin-url: https://authdemofe-92dc7.ondigitalocean.app
 
 server:
   error:
