@@ -23,18 +23,21 @@ public class MessageController {
         return messageService.getTestMessage();
     }
 
-    @GetMapping("/protected")
-    public Message getProtected() {
-        return messageService.getProtectedMessage();
-    }
-
     @GetMapping("/protected/customer")
-    public Message getProtectedCustomer() {
-        return messageService.getCustomerMessage();
+    @PreAuthorize("hasAuthority('read:customer')")
+    public Message getProtectedCustomer(@AuthenticationPrincipal Jwt user) {
+        return messageService.getCustomerMessage(user);
     }
 
     @GetMapping("/admin")
+    @PreAuthorize("hasAuthority('read:admin-messages')")
     public Message getAdmin() {
         return messageService.getAdminMessage();
+    }
+
+    @PostMapping("/role")
+    @PreAuthorize("hasAuthority('write:role')")
+    public Message postRole(@RequestBody AddRole addRole) throws UnirestException, JSONException {
+        return messageService.addRole(addRole);
     }
 }
