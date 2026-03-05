@@ -41,9 +41,4 @@ public class MessageController {
         return messageService.getAdminMessage();
     }
 
-    @PostMapping("/role")
-    @PreAuthorize("hasAuthority('write:role')")
-    public Message postRole(@RequestBody AddRole addRole) throws UnirestException, JSONException {
-        return messageService.addRole(addRole);
-    }
 }
